@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico"/>
+    <title>Odoo Design Exercise</title>
+</head>
+  
+  <body>
+    <div id="progressBar"></div>
+     <!-- nav -->
+    <div class="bg-primary position-relative banner">
+        <header class="pb-3">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary">
+                <div class="container border-bottom pb-2">
+                    <a class="navbar-brand" href="https://www.odoo.com/"><img src="img/odoo-white.svg" alt="logo odoo" width="80"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav ml-lg-auto">
+                            <li class="nav-item p-2">
+                                <a class="nav-link text-white active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item p-2">
+                                <a class="nav-link text-white" href="#">Products</a>
+                            </li>
+                            <li class="nav-item p-2">
+                                <a class="nav-link text-white" href="#">Pages</a>
+                            </li>
+                            <li class="nav-item p-2">
+                                <a class="nav-link text-white" href="#">App</a>
+                            </li>
+                             <li class="nav-item p-2">
+                                <a class="nav-link text-white" href="#">Docs</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+                            <li class="nav-item mr-3">
+                                <a href="" class="nav-link p-3 text-white">Sign in</a>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-light ">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                </svg> Buy now
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- banner -->
+
+        <section class="pt-6 mt-5">
+            <div class="container align-items-center">
+                <div class="row">
+                   <div class="col-lg-6 text-lg-left text-center mt-lg-10">
+                        <h2 class="mb-4 text-white display-4 pl-0 col-lg-7 font-weight-bold">Development done right</h2>
+                        <p class="text-white lead mb-5 col-lg-9 pl-0">Build a beautiful, modern website with flexible components built from scratch.</p>
+                        <button type="button" class="btn btn-light btn-lg py-3 px-5">Get started   
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                        </button>
+                        <div class="d-flex flex-row  mt-5">
+                            <p class="mr-3 text-white">Trusted by :</p>
+                            <div class="row justify-content-center">
+                                <div class="col-3">
+                                    <a href="#" class="banner-brands">
+                                        <img src="img/google-white.svg" alt="logo Google" height="20">
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="#" class="banner-brands">
+                                        <img src="img/spotify-white.svg" alt="logo Spotify" height="20">
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="#" class="banner-brands">
+                                        <img src="img/airbnb-white.svg" alt="logo Airbnb" height="20">
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="#" class="banner-brands">
+                                        <img src="img/paypal-white.svg" alt="logo Paypal" height="20">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                    <div class="col-lg-6 mx-auto mr-lg-0 mb-5">
+                        <div class="card card-manage pb-3">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-4 mt-2">
+                                    <h6 class="card-title">Manage cards</h6>
+                                    <button class="btn btn-sm btn-outline-primary ml-auto">Add new</button>
+                                </div>
+                                <div class="card creditcard border-0 rounded-lg mb-2">
+                                    <div class="card-body px-4">
+                                        <div class="d-flex justify-content-between">
+                                            <img src="img/mastercard.svg" alt="logo mastercard" width="40">
+                                            <span class="badge badge-success text-white p-2">Active</span>
+                                        </div>
+                                        <div class="mt-4 mb-5">
+                                                <h6 class="text-white creditcard-title">Card Number</h6>
+                                                <p class="text-white mt-3">4358 - 7421 - 9256 - 6682 </p>
+                                        </div>
+                                        <div class="row mb-1">
+                                            <div class="col-6">
+                                                <h6 class="text-white creditcard-title">Name</h6>
+                                                <span class="text-white">John Snow</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <h6 class="text-white creditcard-title">Expiry Date</h6>
+                                                <p class="text-white h6">11/23</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end "card" -->
+
+
+                                <ul class="card-info list-group list-group-flush">
+                                  <li class="list-group-item ">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="card-title">Starbucks</h6>
+                                        <span class="">$5,50 USD</span>
+                                    </div>
+                                    <span class="text-muted">Pending - San Francisco, United States</span>
+                                  </li>
+                                  <li class="list-group-item ">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="card-title">Nike Sports</h6>
+                                        <span class="">$129,00 USD</span>
+                                    </div>
+                                    <span class="text-muted">Pending - Lisbon, Portugal</span>
+                                  </li>
+                                  <li class="list-group-item">
+                                    <a href="#" class="text-primary link-dashed">View all</a>
+                                  </li>
+
+                                </ul>
+                            </div>  <!-- end "card body" -->
+                        </div>
+                   </div>
+                </div>    <!-- end "row" -->
+            </div> <!-- end "container" -->
+        </section>
+          <div class="triangle"></div>
+    </div> <!-- end "bg-primary" -->
+
+
+    <section class="tools my-lg-10 pt-lg-5 position-relative">
+        <div class="container align-items-center">
+            <div class="row ">
+                <div class="col-lg-6 mt-10 mt-lg-0">
+                    <div class="card col-xs-8 border-0">
+                        <img src="img/img_01.jpg" class="card-img rounded-lg border-0 tool-image" alt="work meeting">
+                         
+                    </div>
+                    <button type="button" class="btn btn-light position-absolute button-play">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                                  <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                                </svg> Play video
+                        </button>
+                    <div class="card rounded-lg mt-7 shadow-sm">
+                        <div class="card-header bg-white border-0 ml-3 mt-3">
+                            <h5 class="ml-0">Awesome projects</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item mb-4 progress-logo">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="card-title">Create the new logo</h6>
+                                        <span class="">3:50 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                        </svg></span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item mb-4 progress-color">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="card-title">Set up the color palette</h6>
+                                        <span class="">4:00 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                        </svg></span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-bottom mb-4 progress-prototype">
+                                    <div class="d-flex justify-content-between">
+                                        <h6 class="card-title">Wireframe and prototype</h6>
+                                        <span class="">6:50 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                        </svg></span>
+                                    </div>
+                                </li>         
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mx-auto mr-lg-0 col-xl-5 col-sm-12 col-md-8 mb-5 mt-6">
+                    <span class="badge badge-warning text-white px-3 py-2  rounded-lg">Tools</span>
+                    <h3 class="mb-4 mt-3 line-height-big">We build for designers and developers</h3>
+                    <p class="lead mt-4 h6">Get components and examples, including tons of variables that will help you grow your business.</p>
+                </div>
+            </div> 
+        </div>
+    </section> <!-- end Tools Section -->
+
+    <section class="features mb-lg-10 pt-lg-6 position-relative">
+        <div class="container align-items-center">
+            <div class="row">
+                <div class="col-lg-6 mt-7 col-sm-12 pr-lg-9">
+                    <span class="badge badge-success text-white px-3 py-2 rounded-lg">Features</span>
+                    <h5 class="mb-4 mt-3 line-height-bigger">Get components and examples, including tons of variables that will help you grow your business.</h5>
+                    <div class="mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square-fill text-success" viewBox="0 0 16 16">
+                          <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/>
+                        </svg>
+                      <span class="text-success ml-2">Perfect for modern startups</span>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square-fill text-success" viewBox="0 0 16 16">
+                          <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/>
+                        </svg>
+                      <span class="text-success ml-2">Fully customizable and scalable</span>
+                    </div>             
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="card shadow-sm border-0 p-0 ml-3">
+                        <img src="img/img_03.jpg" class="rounded-lg card-img" alt="people working on a computer">
+                    </div>
+                     <button type="button" class="btn btn-light position-absolute button-play">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                          <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                        </svg> Play video
+                    </button>                  
+                </div>              
+            </div>  
+        </div>
+    </section> <!-- end Features Section -->
+
+    <section class="technology mb-lg-10 pt-6 position-relative">
+        <div class="container align-items-center">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card shadow rounded-lg mt-5">
+                                <img src="img/person_03.jpg" class="card-img-top" alt="profile picture">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge badge-pill badge-warning text-white rounded-circle px-3 py-3">JH</span>
+                                        <h6 class="card-title pt-3 pl-3">Jimmy Hendrix</h6>
+                                        <a href="#">
+                                            <svg class="ml-4 text-muted" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow rounded-lg mt-3 mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="ml-n2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-check-circle-fill text-success" viewBox="0 0 16 16">
+                                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="ml-2 ">
+                                            <h6>300+ components</h6>
+                                            <span class="card-text text-muted">Built to be customized.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card rounded-lg shadow">
+                              <div class="card-body text-center py-6">
+                                <img src="img/airbnb.svg" width="150" alt="Airbnb logo">
+                                <div class="rate mt-2 align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-secondary" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                </div>
+                                <h5 class="mt-3">4.95 out of 5 stars</h5>
+                                <p class="card-text text-muted">from 23 reviews</p>
+                              </div>
+                            </div>
+                            <div class="card rounded-lg shadow mt-4 mb-6">
+                              <div class="card-body text-center py-6">
+                                <img src="img/company_01.png" width="50" alt="Company Logo" class="rounded-circle">
+                                <h5 class="mt-3">Website UI Kit</h5>
+                                <div class="mt-4 mb-4">
+                                    <img src="img/person_01.jpg" width="45" alt="First person" class="rounded-circle border border-white">
+                                    <img src="img/person_02.jpg" width="45" alt="First person" class="rounded-circle ml-n3 border border-white">
+                                    <img src="img/person_03.jpg" width="45" alt="First person" class="rounded-circle ml-n3 border border-white">
+                                </div>
+                                <div class="actions mt-2 align-items-center pt-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip text-muted mr-2" viewBox="0 0 16 16">
+                                      <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye text-muted mr-2" viewBox="0 0 16 16">
+                                      <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                      <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart text-muted" viewBox="0 0 16 16">
+                                      <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                    </svg>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mx-auto mr-lg-0 col-xl-5 col-sm-12 col-md-8 mt-4">
+                    <span class="badge badge-primary text-white px-3 py-2 rounded-lg">Technology</span>
+                    <h3 class="mb-4 mt-3 mr-lg-8 line-height-big">We use the latest technologies on the market</h3>
+                    <p class="lead mt-4 h6">Get components and examples, including tons of variables that will help you grow your business.</p>
+                    <a href="#" class="text-primary link link-underline pb-2">See case studies</a>
+                </div>
+            </div> <!-- end Technology Section -->
+        </div>
+
+    </section> <!-- end Technology Section -->
+
+    <section class="install mb-10 pt-6 position-relative">
+        <div class="container align-items-center">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mt-6 col-sm-12 pr-lg-9">
+                    <span class="badge badge-warning text-white px-3 py-2 rounded-lg">Easy to install</span>
+                    <h3 class="mb-4 mt-3 mr-lg-8 line-height-big">Download, install and run.</h3>
+                    <p class="lead mt-4 mb-5 h6">Get components and examples, including tons of variables that will help you grow your business.</p>
+
+                    <a class="btn btn-dark mr-4 py-2 mb-3">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-apple text-white mt-2" viewBox="0 0 16 16">
+                                  <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"/>
+                                  <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"/>
+                                </svg>
+                            </div>
+                            <div class="col-sm-9 ml-2">
+                                <span class="mt-3 text-white app-subtitle">Download on the</span>
+                                <h4 class="card-text text-white app-title">App Store</h4>
+                            </div>
+                            
+                        </div>
+                    </a>
+                    <a class="btn btn-dark mr-4 py-2 mb-3">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <img src="img/playstore.svg" class="mt-2" alt="logo playstore" height="30">
+                            </div>
+                            <div class="col-sm-9 ml-2">
+                                <span class="mt-3 text-white app-subtitle">Download on the</span>
+                                <h4 class="card-text text-white app-title">Play Store</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-6 mt-5">
+                    <div class="card shadow-sm border-0 p-0 ml-3">
+                        <img src="img/img_02.jpg" class="rounded-lg bg-white card-img" alt="people staring at a computer">
+                    </div>
+                     <button type="button" class="btn btn-light position-absolute button-play">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                          <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                        </svg> Play video
+                    </button>      
+                </div>
+            </div>
+        </div>
+    </section> <!-- end Install Section -->
+
+    <section class="solutions position-relative mb-6">
+        <div class="container">          
+            <div class="card border-0 card-solutions py-5 px-5">
+              <div class="card-body">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-6">
+                        <h4 class="text-white">Infinite solutions</h4>
+                        <p class="lead text-white font-weight-light">Intuitive markup, powerful and lightning-fast build tools,
+                        everything you need to turn your ideas into incredible products.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 ml-auto">
+                        <button type="button" class="btn btn-light py-2 px-4">Learn more 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                        </button>
+                    </div>
+                        
+                </div>
+              </div>
+            </div>
+        </div>
+    </section> <!-- end Solutions section -->
+
+    <section class="awards position-relative bg-light pt-6 pb-1 mb-lg-9">
+        <div class="container mb-6">
+            <span class="badge badge-primary text-white px-3 py-2 rounded-lg">Awards</span>
+            <h5 class="mb-4 mt-3">Awards for design, creativity, and innovation on the Internet</h5>
+        </div>
+        <div class="container-fluid">
+            <div class="row justify-content-end ml-lg-10">
+                <div class="col-sm mt-lg-7 mb-3">
+                    <a href="https://fr.airbnb.be/" target="_blank" class="card-brand">
+                        <div class="card rounded-lg shadow mr-3 border-0">
+                            <div class="card-body text-center py-6">
+                                <img src="img/airbnb.svg" width="150" alt="Airbnb logo">
+                                <div class="rate mt-2 align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-secondary" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                </div>
+                                <h5 class="mt-3 text-dark">4.95 out of 5 stars</h5>
+                                <p class="card-text text-muted">from 23 reviews</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm mb-3">
+                    <a href="https://www.amazon.fr/" target="_blank" class="card-brand">
+                        <div class="card rounded-lg shadow mr-3 border-0">
+                            <div class="card-body text-center py-6">
+                            <img src="img/amazon.svg" width="150" alt="Amazon logo">
+                            <p class="card-text text-muted my-3">They build modern looking websites easily using Tabs.</p>
+                            <span href="https://www.amazon.fr/" class="link link-underline pb-2 text-body">Learn more</span>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm mt-lg-7 mb-3">
+                    <a href="https://slack.com/intl/fr-be/" target="_blank" class="card-brand">
+                        <div class="card rounded-lg shadow mr-3 border-0">
+                            <div class="card-body text-center py-6">
+                            <img src="img/slack.svg" width="150" alt="Slack logo">
+                            <p class="card-text text-muted my-3">They build modern looking websites easily using Trello.</p>
+                            <span href="https://www.amazon.fr/" class="link link-underline pb-2 text-body">Learn more</span>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm mb-3">
+                    <a href="https://www.spotify.com/fr/" target="_blank" class="card-brand">
+                        <div class="card rounded-lg shadow mr-3 border-0">
+                            <div class="card-body text-center py-6">
+                                <img src="img/spotify.svg" width="150" alt="Airbnb logo">
+                                <div class="rate mt-2 align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-warning" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star text-secondary" viewBox="0 0 16 16">
+                                      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+                                    </svg>
+                                </div>
+                                <h5 class="mt-3 text-dark">4.95 out of 5 stars</h5>
+                                <p class="card-text text-muted">from 23 reviews</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm mt-lg-7 mb-3">
+                    <a href="https://www.paypal.com/be/home" target="_blank" class="card-brand">
+                        <div class="card rounded-lg shadow mr-3 border-0">
+                            <div class="card-body text-center py-6">
+                            <img src="img/paypal.svg" width="150" alt="Paypal logo">
+                            <p class="card-text text-muted my-3">They build modern looking websites easily using Docker.</p>
+                            <span href="https://www.amazon.fr/" class="link link-underline pb-2 text-body">Learn more</span>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+             
+            </div> <!-- container row -->
+        </div>   <!-- container fluid -->
+        <div class="triangle"></div>
+    </section> <!-- end Awards section -->
+
+    <section class="helpful position-relative mt-10 mb-9">
+        <div class="container">
+            <h3 class="mb-2 text-center">Helpful answers</h3>
+             <p class="lead mb-5 text-center">Get components and examples, including tons of variables that will help you grow your business.</p>
+             <div class="row">
+                <div class="col-lg-6">
+                    <div class="accordion" id="accordionExample">
+                      <div class="card border-0 shadow-sm bg-white mb-3 rounded-lg">
+                        <div class="card-header bg-white" id="headingOne">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left text-dark shadow-none font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-file-earmark mr-3" viewBox="0 0 16 16">
+                                  <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                                </svg>
+                                Which license do I need?
+                            </svg>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                          <div class="card-body">
+                            Can a man still be brave if he’s afraid? That is the only time a man can be brave.Winter is coming. More pigeon pie, please. All men must die. Dunc the Lunk, thick as a castle wall.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card border-0 shadow-sm bg-white mb-3 rounded-lg">
+                        <div class="card-header bg-white" id="headingTwo">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left text-dark shadow-none font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-lock mr-3" viewBox="0 0 16 16">
+                                  <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+                                </svg>
+                                How do I get access to my database?
+                            </svg>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                          <div class="card-body">
+                            Words are like wind. As High as Honor. The War of the 5 kings. The Dothraki do things in their own time, for their own reasons. May the Father judge him justly.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card border-0 shadow-sm bg-white mb-3 rounded-lg">
+                        <div class="card-header bg-white" id="headingThree">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left text-dark shadow-none font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-folder mr-3" viewBox="0 0 16 16">
+                                  <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"/>
+                                </svg>
+                                How do I see previous orders?
+                            </svg>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                          <div class="card-body">
+                            More pigeon pie, please. The Knight of Lemonwood. King in the North. When you play the game of thrones, you win or you die. Forgive my manners. I don't see many ladies these days. Lucky for the ladies.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div> <!-- col -->
+                <div class="col-lg-6">
+                    <div class="accordion" id="accordionExample">
+                      <div class="card border-0 shadow-sm bg-white mb-3 rounded-lg">
+                        <div class="card-header bg-white" id="headingOne">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left text-dark shadow-none font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-file-earmark mr-3" viewBox="0 0 16 16">
+                                  <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                                </svg>
+                                Which license do I need?
+                            </svg>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                          <div class="card-body">
+                            Can a man still be brave if he’s afraid? That is the only time a man can be brave.Winter is coming. More pigeon pie, please. All men must die. Dunc the Lunk, thick as a castle wall.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card border-0 shadow-sm bg-white mb-3 rounded-lg">
+                        <div class="card-header bg-white" id="headingTwo">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left text-dark shadow-none font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-lock mr-3" viewBox="0 0 16 16">
+                                  <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+                                </svg>
+                                How do I get access to my database?
+                            </svg>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                          <div class="card-body">
+                            Words are like wind. As High as Honor. The War of the 5 kings. The Dothraki do things in their own time, for their own reasons. May the Father judge him justly.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card border-0 shadow-sm bg-white mb-3 rounded-lg">
+                        <div class="card-header bg-white" id="headingSix">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left text-dark shadow-none font-weight-bold collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-folder mr-3" viewBox="0 0 16 16">
+                                  <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"/>
+                                </svg>
+                                How do I see previous orders?
+                            </svg>
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                          <div class="card-body">
+                            More pigeon pie, please. The Knight of Lemonwood. King in the North. When you play the game of thrones, you win or you die. Forgive my manners. I don't see many ladies these days. Lucky for the ladies.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div> <!-- col -->
+            </div>  <!-- row --> 
+            <h5 class="mb-4 mt-6 text-center">I want to start a new project.</h5>
+            <div class="col-lg-4 mx-auto">
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary py-2 px-4 mr-3">Buy now 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-light py-2 px-4">Learn more 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer position-relative">
+        <div class="triangle"></div>
+        <div class="container">
+            <div class="row mt-lg-4 footer-border">
+                <div class="col-lg-6">
+                     <h4 class="text-white">Brilliant solutions for your ideas</h4>
+                     <p class="lead text-white">Modern-looking websites.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-light py-2 px-4 mr-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book mr-2" viewBox="0 0 16 16">
+                      <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                    </svg>Documentation
+                    </button>
+                    <button type="button" class="btn btn-primary py-2 px-4">Purchase now</button>
+                </div>
+                </div>
+            </div>
+            <div class="row my-4 footer-border">
+                <div class="col-lg-6">
+                    <a class="navbar-brand" href="https://www.odoo.com/"><img src="img/odoo-white.svg" alt="logo odoo" width="80"></a>
+                    <p class="text-muted mt-2 mb-4 mr-lg-8">Odoo attempts to bring the best development experience to designers and developers by offering the tools needed for having a quick and solid start in most web projects.</p>
+                    <div class="d-flex align-items-center mt-2 socials">
+                        <a href="https://dribbble.com/" target="_blank" class="footer-socials">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dribbble text-white mr-4" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8zm5.284 3.688a6.802 6.802 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A6.95 6.95 0 0 1 8 1.18zm-2.907.642A43.123 43.123 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.865 6.865 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.817 6.817 0 0 1-1.752-4.564zM8 14.837a6.785 6.785 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.246 28.246 0 0 1 1.457 5.18A6.722 6.722 0 0 1 8 14.837zm3.81-1.171c-.07-.417-.435-2.412-1.328-4.868 2.143-.338 4.017.217 4.251.295a6.774 6.774 0 0 1-2.924 4.573z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/" target="_blank" class="footer-socials">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github text-white mr-4" viewBox="0 0 16 16">
+                              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer-socials">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram text-white mr-4" viewBox="0 0 16 16">
+                              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank" class="footer-socials">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook text-white mr-4" viewBox="0 0 16 16">
+                              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h5 class="text-white mb-3">Account</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="link ">Profile</a>
+                                </li>
+                                <li>
+                                    <span class="link">Settings</span>
+                                </li>
+                                <li>
+                                    <span class="link">Billing</span>
+                                </li>
+                                <li>
+                                    <span class="link">Notifications</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3">
+                            <h5 class="text-white mb-3">About</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="link ">Services</a>
+                                </li>
+                                <li>
+                                    <span class="link">Pricing</span>
+                                </li>
+                                <li>
+                                    <span class="link">Contact</span>
+                                </li>
+                                <li>
+                                    <span class="link">Careers</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3">
+                            <h5 class="text-white mb-3">Company</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#" class="link ">Community</a>
+                                </li>
+                                <li>
+                                    <span class="link">Help center</span>
+                                </li>
+                                <li>
+                                    <span class="link">Support</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="text-muted"> &copy; <span class="font-weight-bold text-white">Odoo.</span> All rights reserved</p>
+                </div>
+                <div class="col-lg-3">
+                    <div class="d-flex align-items-center">
+                        <a href="#" class="link mr-4">Terms</a>
+                        <a href="#" class="link mr-4">Privacy</a>
+                        <a href="#" class="link">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+
+  </body>
+</html>

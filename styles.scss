@@ -1,0 +1,406 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+$theme-colors: (
+  "main-color": #038aff,
+  "light": #fff,
+  "darker": #161348, 
+);
+
+body {
+  background: #fafbff;
+  color: #152d5b;
+  line-height: 2;
+
+}
+
+#bar{
+    position:fixed;
+    background-color:#ffffff;
+    width:100%;
+    height:5px;
+    z-index: 2000;
+}
+#progressBar {
+  position: fixed;
+  top: 0;
+  width: 0%;
+  height: 6px;
+  background: #ffffff;
+  transition: width 0.2s ease;
+  z-index: 2000;
+}
+
+.line-height-bigger{
+	line-height: 2;
+}
+
+.line-height-big{
+	line-height: 1.5;
+}
+
+.lead{
+	line-height: 2 !important;
+	color: #718095;
+}
+
+.creditcard-title{
+	text-transform: uppercase;
+	font-weight: 300; 
+	&.card-info{
+		text-transform: none;
+	}
+}
+
+.link{
+	.footer &{
+		text-decoration: none;
+		color: #a1aebf;
+		cursor: pointer;
+		&:hover{
+			color: #fff;
+			font-style: italic;
+		}
+	}
+}
+
+.link-dashed{
+	border-bottom: 1px dashed;
+	&:hover{
+		text-decoration: none;
+		font-weight: bold;
+	} 
+}
+
+
+.link-underline{
+	padding-bottom: 2px;
+	border-bottom: 3px solid #038aff;
+	.awards &{
+		border-bottom: 3px solid #161446;
+	}
+	&:hover{
+		text-decoration: none;
+		font-weight: bold;
+	} 
+}
+
+.nav-item .active {
+	.nav-link: #fff;
+	font-weight: bold;
+}
+
+.nav-link{
+	transition: -webkit-all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+	&:hover{
+		font-style: italic;
+		color: #152d5b !important;
+	}
+}
+
+.navbar{
+	padding: 0.5rem 1rem 0 0.5rem!important;
+	.border-bottom{
+		border-bottom: 1px solid rgba(255, 255, 255, .3) !important;
+	}
+}
+
+.banner-brands{
+	&:hover{
+		img{
+			opacity: 0.8;
+		}
+	}
+}
+
+.card-manage{
+	border-radius: 15px 15px 90px 15px !important;
+	.creditcard{
+		background: url("img/credit-card.svg") no-repeat;
+		background-color: #1d1348;
+		background-size: 100%;
+        width:100%;
+        height:100%;
+	}
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 90px 100vw 0 0;
+  border-color: #007bff transparent transparent;
+  transform: scale(1.0001);
+  position: relative;
+  top: 90px;
+  .awards &{
+  	border-color: #edeff6 transparent transparent;
+  	top: 93px;
+  }
+
+  .footer &{
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 60px 100vw;
+		border-color: transparent transparent #161348 transparent;
+		top: -60px;
+	}
+}
+
+.tools{
+	&:after{
+		content: '';
+		background: url("img/separator-dashed.svg") no-repeat;
+		width: 181px;
+	    height: 251px;
+	    display: block;
+	    position: absolute;
+	    top: 512px;
+	    left: 41vw;
+	}
+
+	img{
+		position: absolute;
+    	top: 1vh;
+    	right: -3vw;
+    	width: 67%;
+    	z-index: 1;
+	}
+}
+
+.features{
+		&:after{
+		content: '';
+		background: url("img/separator-dashed.svg") no-repeat;
+		transform: rotate(270deg);
+		 width: 186px;
+	    height: 270px;
+	    display: block;
+	    position: absolute;
+	    top: 458px;
+	    left: 53vw;
+	}
+}
+
+.technology{
+	&:after{
+		content: '';
+		background: url("img/separator-dashed.svg") no-repeat;
+		width: 181px;
+	    height: 251px;
+	    display: block;
+	    position: absolute;
+	    top: 784px;
+	    left: 41vw;
+	}
+}
+
+.button-play{
+	left: 4vw;
+    z-index: 1;
+    top: 30px;
+    .tools & {
+    	left: 31vw;
+    }
+}
+
+.progress-logo{
+	&:after{
+		content: "";
+    	height: 2px;
+    	background: #F9BB3E;
+    	width: 40%;
+    	display: block;
+    	margin-left: -20px;
+    	position: relative;
+    	top: 13px;
+	}
+}
+.progress-color{
+	&:after{
+		content: "";
+    	height: 2px;
+    	background: #F9BB3E;
+    	width: 60%;
+    	display: block;
+    	margin-left: -20px;
+    	position: relative;
+    	top: 13px;
+	}
+}
+.progress-prototype{
+	&:after{
+		content: "";
+    	height: 2px;
+    	background: #F9BB3E;
+    	width: 80%;
+    	display: block;
+    	margin-left: -20px;
+    	position: relative;
+    	top: 13px;
+	}
+}
+
+.actions{
+	&:before{
+		content: '';
+		background: url(img/separator-small.jpg) no-repeat;
+		display: block;
+		width: 167px;
+		height: 3px;
+	}
+}
+
+.app-subtitle{
+	font-size: 12px;
+}
+
+.app-title{
+	font-size: 21px;
+}
+
+.card-solutions{
+	background: #161348;
+	border-radius: 0 60px 0 60px !important;
+}
+
+.solutions{
+	p{
+		font-size: 1rem;
+	}
+}
+.rounded-lg{
+	border-radius: 0.6rem !important;
+	.awards &{
+		border-radius: 1rem !important;
+	}
+	&.badge{
+		border-radius: 0.7rem !important;
+	}
+}
+
+a.card-brand{
+	text-decoration: none;
+	cursor: pointer;
+	.card{
+	transition: -webkit-all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+	}
+	&:hover{
+		.card{
+			border-radius: 0 !important;
+			 transform: scale(1.1);
+   			 -webkit-transform: scale(1.1);
+		}
+	}
+}
+
+.awards{
+	.bg-light{
+		background-color: #fafbff !important;
+	}
+}
+
+.bg-light{
+	background-color: #edeff6 !important;
+}
+
+.btn-link{
+	text-decoration: none !important;
+	&:focus{
+
+	}
+}
+
+.accordion{
+	.btn-link{
+		&:after{
+			content: '-';
+			font-size: 16px;
+		    width: 20px;
+		    position: absolute;
+		    right: 15px;
+		    top: 20px;
+		}
+	}
+	.btn-link.collapsed{
+		&:after{
+			content: '+' !important;
+			font-size: 16px;
+		    width: 20px;
+		    position: absolute;
+		    right: 15px;
+		    top: 20px;
+		}
+	}
+}
+
+footer.footer{
+	background-color: #161348 !important;
+}
+
+.footer-border{
+	&:after{
+		content: '';
+		border-bottom: 1px solid white;
+		width: 50vw;
+	    position: relative;
+	    opacity: 0.1;
+	    margin: 0 auto;
+	    padding-top: 40px;
+	}
+}
+
+.text-muted{
+	.footer &{
+		color: #a1aebf !important; 
+	}
+}
+
+.footer-socials{
+	&:hover{
+		.bi{
+			color: #a1aebf !important;
+		}
+	}
+}
+
+@media screen and (max-width: 950px){
+	.tools{
+		&:after{
+			content: '';
+			display: none;
+		}
+
+		img{
+			position: relative;
+	    	top: 0;
+	    	right: 0;
+	    	width: 100%;
+	    	z-index: 1;
+		}
+		.button-play{
+			left: 58vw;
+		}
+	}
+
+	.features{
+		&:after{
+			content: '';
+			display: none;
+		}
+	}
+	.technology{
+		&:after{
+			content: '';
+			display: none;
+		}
+	}
+
+	.socials{
+		margin-bottom: 2rem;
+	}
+}
+
