@@ -66,9 +66,11 @@ body {
 
 .link-dashed{
 	border-bottom: 1px dashed;
+	transition: -webkit-all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 	&:hover{
 		text-decoration: none;
-		font-weight: bold;
+		font-style: italic;
 	} 
 }
 
@@ -76,12 +78,19 @@ body {
 .link-underline{
 	padding-bottom: 2px;
 	border-bottom: 3px solid #038aff;
+	transition: -webkit-all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 	.awards &{
+		transition: -webkit-all 0.2s ease-in-out;
+    	transition: all 0.2s ease-in-out;
 		border-bottom: 3px solid #161446;
+		&:hover{
+			font-style: normal;
+		}
 	}
 	&:hover{
 		text-decoration: none;
-		font-weight: bold;
+		font-style: italic;
 	} 
 }
 
