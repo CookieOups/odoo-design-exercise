@@ -12060,6 +12060,10 @@ footer.footer {
 }
 
 @media screen and (max-width: 950px) {
+  .button-play {
+    left: 8vw;
+  }
+
   .tools:after {
     content: "";
     display: none;
@@ -12087,6 +12091,21 @@ footer.footer {
 
   .socials {
     margin-bottom: 2rem;
+  }
+
+  .actions:before {
+    content: "";
+    background: url(img/separator-small.jpg) no-repeat;
+    display: block;
+    width: 167px;
+    height: 3px;
+    position: relative;
+    right: -19vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .button-play {
+    left: 14vw;
   }
 }
 
